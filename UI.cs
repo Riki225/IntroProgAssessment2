@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using CivSem1Challenge2_RegistrationSystem.helpers;
 using CivSem1Challenge2_RegistrationSystem.models;
@@ -39,7 +40,14 @@ namespace CivSem1Challenge2_RegistrationSystem
                 case "1":
                     //TODO: from the attribute this.Courses, print the courseNo and names of all of the courses
                     // use GetCourseDetails to do this
+                    Course SD = new Course("Software Development", 3333);
+                    SD.GetCourseDetails();
 
+                    Course N = new Course("Networking", 5555);
+                    N.GetCourseDetails();
+
+                    Course GD = new Course("Games Development", 7777);
+                    GD.GetCourseDetails();
                     //----------
                     break;
                 
@@ -75,6 +83,7 @@ namespace CivSem1Challenge2_RegistrationSystem
                 case "4":
                     //TODO: Print the amount of students in the system
                     // Create and call a method/function named GetNumStudents() to do this.
+                    
                     break;
 
                 case "5":

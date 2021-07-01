@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System;
+using System.IO;
 
 namespace CivSem1Challenge2_RegistrationSystem.models {
     public class Course {
@@ -10,11 +12,10 @@ namespace CivSem1Challenge2_RegistrationSystem.models {
             this.Name = name;
             this.CourseNo = courseNo;
             this.Enrolments = new List<Student>();
-
         }
 
-        public string GetCourseDetails() {
-            return $"{this.CourseNo}: {this.Name}";
+        public void GetCourseDetails() {
+            Console.WriteLine($"Course Number: {this.CourseNo} --> Course Name: {this.Name}");
         }
     }
 }
