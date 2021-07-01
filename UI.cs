@@ -83,7 +83,7 @@ namespace CivSem1Challenge2_RegistrationSystem
                 case "4":
                     //TODO: Print the amount of students in the system
                     // Create and call a method/function named GetNumStudents() to do this.
-                    
+                    GetNumStudents();
                     break;
 
                 case "5":
@@ -145,7 +145,12 @@ namespace CivSem1Challenge2_RegistrationSystem
 
 
         //TODO: create the GetNumStudents method/function here
+        public void GetNumStudents()
+        {
+            string[] studata = System.IO.File.ReadAllLines(@"C:\Users\103475494\Desktop\CivSem1Challenge2-RegistrationSystem\student_data_mock.csv");
 
+            Console.WriteLine($"Number of Students: {studata.Length}");
+        }
 
         //---------------------
 
