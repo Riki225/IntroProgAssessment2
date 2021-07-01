@@ -52,10 +52,46 @@ namespace CivSem1Challenge2_RegistrationSystem
                     break;
                 
                 case "2":
+                    string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\103475494\Desktop\CivSem1Challenge2-RegistrationSystem\student_data_mock");
+                    var firstNames = new List<string>();
+                    var surNames = new List<string>();
+                    var YOBs = new List<int>();
+                    var MOBs = new List<int>();
+                    var DOBs = new List<int>();
+                    var StuNo = new List<int>();
+                    var firstRegY = new List<int>();
+                    var courseNumb = new List<int>();
+
+                    for(int i = 1; i < csvLines.Length; i++)
+                    {
+                        string [] rowData = csvLines[i].Split(',');
+
+                        firstNames.Add(rowData[0]);
+                        surNames.Add(rowData[1]);
+                        int yobs = int.Parse(rowData[2]);
+                        YOBs.Add(yobs);
+                        int mobs = int.Parse(rowData[3]);
+                        MOBs.Add(mobs);
+                        int dobs = int.Parse(rowData[4]);
+                        DOBs.Add(dobs);
+                        int stuno = int.Parse(rowData[5]);
+                        StuNo.Add(stuno);
+                        int firstregy = int.Parse(rowData[6]);
+                        firstRegY.Add(firstregy);
+                        int coursenumb = int.Parse(rowData[7]);
+                        courseNumb.Add(coursenumb);
+                    }
+
                     System.Console.WriteLine("Please enter the course number");
-                    int num;
-                    while(!int.TryParse(Console.ReadLine(), out num)) {
-                        System.Console.WriteLine("Invalid, enter again");
+                    int num = int.Parse(Console.ReadLine());
+
+                    if (num == 3333)
+                    {   
+
+                        int count = 0;
+                        for (int i = 0; i < courseNumb.Length; i++)
+            {
+                    }
                     }
 
                     int numStudents = this.CourseGetNumStudents(num);
